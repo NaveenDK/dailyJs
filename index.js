@@ -1,10 +1,5 @@
-let name = "naveen";
-console.log(name);
-
-//cannot be a reserved keyword
-//should be meaningful
-//Cannot start with a number
-//Cannot contain a space or hiphen (-)
-
-let firstName = "Naveen";
-let lastName = "Kolambage";
+let name = " Naveen";
+let age = "5959";
+let isApproved = false;
+let firstName = undefined;
+let selectedcolor = "red";
