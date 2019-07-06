@@ -1,14 +1,20 @@
-//Using if else
-//Hour, if hour is bw 6am and 12pm: Good morning!
-//If it is between 12pm and 6pm : Good afternoon!
-//Otherwise : Good evening!
-//Basic structure
-let hour = 19;
-if (hour >= 6 && hour < 12) {
-  //  statement;
-  console.log("Good morning");
-} else if (hour >= 12 && hour < 18) {
-  console.log("Good afternoon");
+//Using for-in loop
+const person = {
+  name: "Mosh",
+  age: 30
+};
+//
+// for (let key in person) {
+//   console.log(key);
+// }
+//using bracket notation to loop through object and attributes
+// for (let key in person) {
+//   console.log(key, person[key]);
+// }
+const colors = ["red", "green", "blue"];
+
+// For of loop to iterate over arrays
+
+for (let color of colors) {
+  console.log(color);
 }
-// statement;
-else console.log("Good evening!");
