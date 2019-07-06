@@ -1,20 +1,21 @@
-//Using for-in loop
-const person = {
-  name: "Mosh",
-  age: 30
-};
-//
-// for (let key in person) {
-//   console.log(key);
-// }
-//using bracket notation to loop through object and attributes
-// for (let key in person) {
-//   console.log(key, person[key]);
-// }
-const colors = ["red", "green", "blue"];
+//Exercise 1- Max of Two Numbers
+//Write a function that takes two numbers and returns the maximum of the two
 
-// For of loop to iterate over arrays
+function checkMax(a, b) {
+  if (a == b) {
+    console.log("both same");
+  } else if (a > b) {
+    console.log(a + " is the max");
+  } else if (b > a) {
+    console.log(b + " is the max");
+  }
+}
 
-for (let color of colors) {
-  console.log(color);
+checkMax(1, 3);
+checkMax(4, 2);
+checkMax(5, 5);
+
+//recommended answer
+function max(a, b) {
+  return a > b ? a : b;
 }
