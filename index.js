@@ -1,8 +1,7 @@
-//if a customer has more than 100 points
-//they are a gold customer
-//otherwise they are a silver customer
+//Exercise 1  Swap a and b
+let a = "red";
+let b = "blue";
 
-let points = 110;
-let type = points > 100 ? "gold" : "silver";
+console.log(a);
 
-console.log(type);
+console.log(b);
