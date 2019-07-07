@@ -1,39 +1,38 @@
-//Exercise 3 FizzBuzz
-// Divisible by 3 => Fizz
-//Divisible by 5 => Buzz
-//Divisiible by both 3 and 5 => FizzBuzz
-//Not divisible by 3 or 5 => Input
-//Not a number => 'Not a number'
-// const output = fizzBuzz(7);
-// console.log(output);
+//Exercise 4
+checkSpeed(130);
 
-// function fizzBuzz(input) {
-//   if (isNaN(input)) {
-//     return "Not a number";
-//   } else {
-//     if (input % 3 == 0 && input % 5 == 0) {
-//       return "FizzBuzz";
-//     } else if (input % 3 == 0 && !input % 5 == 0) {
-//       return "Fizz";
-//     } else if (input % 5 == 0 && !input % 3 == 0) {
-//       return "Buzz";
-//     } else {
-//       return input;
-//     }
+// function checkSpeed(speed) {
+//   if (speed > 75) {
+//     if ((speed - 70) / 5 >= 12) return "License Suspended";
+//     else return Math.floor((speed - 70) / 5) + " Demerit Point/s";
 //   }
+//   return "Ok";
 // }
 
-console.log(fizzBuzz(true));
-
 //recommended answer
-function fizzBuzz(input) {
-  if (typeof input !== "number") return NaN;
 
-  if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz";
+function checkSpeed(speed) {
+  const speedLimit = 70;
+  const kmPerPoint = 5;
 
-  if (input % 3 === 0) return "Fizz";
+  if (speed < speedLimit + kmPerPoint) console.log("Ok");
+  else {
+    const points = Math.floor((speed - speedLimit) / kmPerPoint);
+    if (points >= 12) console.log("License suspended");
+    else console.log("Points", points);
+  }
+}
+//Indentation issue, - use return; and remove else
+function checkSpeedIndentationfixed(speed) {
+  const speedLimit = 70;
+  const kmPerPoint = 5;
 
-  if (input % 5 === 0) return "Buzz";
+  if (speed < speedLimit + kmPerPoint) {
+    console.log("Ok");
+    return;
+  }
 
-  return input;
+  const points = Math.floor((speed - speedLimit) / kmPerPoint);
+  if (points >= 12) console.log("License suspended");
+  else console.log("Points", points);
 }
