@@ -1,15 +1,8 @@
-//Exercise 2 Landscape or portrate
+//Exercise 3 FizzBuzz
+// Divisible by 3 => Fizz
+//Divisible by 5 => Buzz
+//Divisiible by both 3 and 5 => FizzBuzz
+//Not divisible by 3 or 5 => Input
 
-// function isLandscape(width, height) {
-//   return width > height ? true : false;
-// }
-
-// console.log(isLandscape(2, 5));
-
-//recommended answer
-
-function isLandscape(width, height) {
-  return width > height;
-}
-
-console.log(isLandscape(20, 5));
+// const output = fizzBuzz(7);
+// console.log(output);
