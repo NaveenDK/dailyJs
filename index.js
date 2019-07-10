@@ -1,20 +1,18 @@
-//Exercise 6
-//Count truthy values of  an array
+//Exercise 7
+//write a function to show string properties of an object(
+const movie = {
+  title: "a",
+  releaseYear: 2018,
+  rating: 4.5,
+  director: "b"
+};
 
-//All Falsy
-//undefined
-//null
-//' '
-//false
-//0
-//NaN
-// for example const array = [0,null,undefined,'',1,2,3]
-//countTruthy in the above case will return 3
-const array = [0, null, undefined, "", 1, 2, 4, 4, 3];
-function countTruthy(array) {
-  var trueCount = 0;
-  for (let value of array) if (value) trueCount++;
-  return trueCount;
+showProperties(movie);
+
+function showProperties(obj) {
+  for (var propt in obj) {
+    if (typeof obj[propt] === "string") {
+      console.log(propt + ":" + obj[propt]);
+    }
+  }
 }
-
-console.log(countTruthy(array));
