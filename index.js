@@ -1,18 +1,14 @@
-//Exercise 7
-//write a function to show string properties of an object(
-const movie = {
-  title: "a",
-  releaseYear: 2018,
-  rating: 4.5,
-  director: "b"
-};
+//Exercise 8
+// Sum of multiples of 3 and 5
 
-showProperties(movie);
-
-function showProperties(obj) {
-  for (var propt in obj) {
-    if (typeof obj[propt] === "string") {
-      console.log(propt + ":" + obj[propt]);
+function sum3n5(limit) {
+  let sum = 0;
+  for (let i = 0; i <= limit; i++) {
+    if (i % 3 == 0 || i % 5 == 0) {
+      sum = sum + i;
     }
   }
+  return sum;
 }
+
+console.log(sum3n5(10));
