@@ -13,18 +13,25 @@
 //     if (isPrime) console.log(number);
 //   }
 // }
-showPrimes(10);
-//recommended Answer, functions with single responsibility
 
+//recommended Answer, functions with single responsibility
+showPrimes(10);
 function showPrimes(limit) {
   for (let number = 2; number <= limit; number++) {
-    isPrime(number);
-    console.log(number);
+    if (isPrime(number)) {
+      console.log(number);
+    }
+    //   break;
   }
 }
 
 function isPrime(number) {
   for (let factor = 2; factor < number; factor++) {
-    if (number % factor == 0) return false;
+    if (number % factor === 0) {
+      return false;
+    }
   }
+  return true;
 }
+
+//singular use ,if (isPrime(3)) console.log("three is prime");
