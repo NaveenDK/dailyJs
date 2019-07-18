@@ -1,37 +1,19 @@
-//Exercise 11
-//Print all prime numbers in the limit
-//Basic Answer
-// function showPrimes(limit) {
-//   for (let number = 2; number <= limit; number++) {
-//     let isPrime = true;
-//     for (let factor = 2; factor < number; factor++) {
-//       if (number % factor === 0) {
-//         isPrime = false;
-//         break;
-//       }
-//     }
-//     if (isPrime) console.log(number);
-//   }
-// }
+//Basic idea of an object
 
-//recommended Answer, functions with single responsibility
-showPrimes(10);
-function showPrimes(limit) {
-  for (let number = 2; number <= limit; number++) {
-    if (isPrime(number)) {
-      console.log(number);
-    }
-    //   break;
+let radius=1;
+let x =1;
+let y = 1;
+
+const circle = {
+  radius : 1,
+  location : {
+    x:1,y:1
+  },
+  isVisible:true,
+  draw: function()
+  {
+    console.log('draw');
   }
-}
+};
 
-function isPrime(number) {
-  for (let factor = 2; factor < number; factor++) {
-    if (number % factor === 0) {
-      return false;
-    }
-  }
-  return true;
-}
-
-//singular use ,if (isPrime(3)) console.log("three is prime");
+circle.draw();
