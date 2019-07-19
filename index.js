@@ -1,6 +1,4 @@
-//Section 2 Exercise 1
-//Create an address object with, street city,zipCode
-//showAddress(address) , object that displays all properties, with values
+//Section 2 Exercise 2, Initialize address object with constructor and factory function
 
 let address ={
   street:"a",
@@ -8,8 +6,23 @@ let address ={
   zipCode: "c"
 };
 
-function showAddress(address){
-  for (let key in address)
-    console.log(key,address[key]);
+function addressObject (street,city,zip){
+  this.street=street;
+  this.city= city;
+  this.zip=zip;
 }
-console.log(address);
+
+const constructorObject = new addressObject ("constructor","constructor","constructor");
+console.log(constructorObject);
+
+function CreateAddress(street,city,zip){
+  return{
+    street,
+    city,
+    zip
+  };
+}
+
+const factoryObject = CreateAddress("factory","factory","factory");
+
+console.log(factoryObject);
