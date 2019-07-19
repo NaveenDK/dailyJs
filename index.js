@@ -1,28 +1,18 @@
-//Section 2 Exercise 2, Initialize address object with constructor and factory function
+//Implement 2 functions
+//one checking if the functions are equal
+//the other checking if they are same (ie meaning they are pointing to the same object)
 
-let address ={
-  street:"a",
-  city :"b",
-  zipCode: "c"
-};
+let address1 = new Address ('a','b','c');
 
-function addressObject (street,city,zip){
-  this.street=street;
-  this.city= city;
-  this.zip=zip;
+let address2 = new Address ('a','b','c');
+
+function areEqual (address1,address2)
+{
+
+}
+function areSame (address1,address2)
+{
+
 }
 
-const constructorObject = new addressObject ("constructor","constructor","constructor");
-console.log(constructorObject);
 
-function CreateAddress(street,city,zip){
-  return{
-    street,
-    city,
-    zip
-  };
-}
-
-const factoryObject = CreateAddress("factory","factory","factory");
-
-console.log(factoryObject);
