@@ -1,19 +1,3 @@
-//Basic idea of an object
-
-let radius=1;
-let x =1;
-let y = 1;
-
-const circle = {
-  radius : 1,
-  location : {
-    x:1,y:1
-  },
-  isVisible:true,
-  draw: function()
-  {
-    console.log('draw');
-  }
-};
-
-circle.draw();
+//Section 2 Exercise 1
+//Create an address object with, street city,zipCode
+//showAddress(address) , object that displays all properties, with values
