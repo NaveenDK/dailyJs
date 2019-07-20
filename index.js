@@ -1,9 +1,15 @@
-//create an object that can be initialized into any
-//price range (cheap, moderate, pricey)
+//Array from Range, take two params and gives the range
 
-let priceRanges = [
-  {label:'$', tooltip:'Inexpensive',minPerPerson:0, maxPerPerson:10},
-  {label:"$$",tooltip:'Moderate', minPerPerson:11,maxPerPerson:20},
-  {label:'$$$', tooltip:'Pricey', minPerPerson:21, maxPerPerson:30}
-]
+const numbers = arrayFromRange(-10,4);
+
+console.log(numbers);
+
+
+function arrayFromRange(min,max){
+  let array = [];
+  for(let i=min;i<=max;i++){
+    array.push(i);
+  }
+return array;
+}
 
