@@ -1,15 +1,17 @@
-//Array from Range, take two params and gives the range
+//Function that checks includes ()
+const numbers = [1,2,3,4];
 
-const numbers = arrayFromRange(-10,4);
+//console.log (numbers.includes(6));
 
-console.log(numbers);
-
-
-function arrayFromRange(min,max){
-  let array = [];
-  for(let i=min;i<=max;i++){
-    array.push(i);
+function includes (array,searchElement)
+{
+  for( let element of array){
+    if(element === searchElement){
+      return true;
+    } 
   }
-return array;
-}
+  return false;
 
+ 
+}
+console.log(includes(numbers,3));
