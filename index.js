@@ -1,17 +1,18 @@
-//Function that checks includes ()
+//Function to exclude an element from an array
+
 const numbers = [1,2,3,4];
 
-//console.log (numbers.includes(6));
+const output = except (numbers,[1,3]);
 
-function includes (array,searchElement)
-{
-  for( let element of array){
-    if(element === searchElement){
-      return true;
-    } 
+console.log(output);
+
+function except(array,excluded){
+  let newArray=[];
+  for (let element of array){
+    if(!excluded.includes(element)){
+      newArray.push(element);
+    }
   }
-  return false;
+  return newArray;
 
- 
 }
-console.log(includes(numbers,3));
