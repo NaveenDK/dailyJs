@@ -18,5 +18,5 @@ function getMax(array){
     // (accumulator<current) ? accumulator=current: accumulator;
     // },0);
     
-    array.reduce((a,b)=>(a>b)?a:b);
+    return array.reduce((a,b)=>(a>b)?a:b);
 }
