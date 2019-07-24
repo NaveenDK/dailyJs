@@ -1,22 +1,17 @@
-const numbers = [1,2];
+//Section 4 Question 1
+//return Sum of Arguments in a functio
+//take a set of numbers and return sum
+//take an array and return sum
 
-const max = getMax(numbers);
+function sum (...items){
 
-console.log(max);
-
-function getMax(array){
-    // let max= array[0];
-    // for (i=0;i<array.length;i++){
-    //     if(max<array[i]){
-    //         max=array[i]
-    //     }
-    // }
-    // return max;
-    if(array.length === 0) return undefined;
-    
-    // return array.reduce((accumulator, current)=>{
-    // (accumulator<current) ? accumulator=current: accumulator;
-    // },0);
-    
-    return array.reduce((a,b)=>(a>b)?a:b);
+    if(items.length === 1 && Array.isArray(items[0]))
+    {
+        items = [...items[0]];
+    }
+    return items.reduce((a,b)=>a + b);
 }
+
+//See, either way you get the sum now 
+console.log(sum(1,2,4,5));
+console.log(sum([1,2,4,5]));
