@@ -1,17 +1,39 @@
-//Section 4 Question 1
-//return Sum of Arguments in a functio
-//take a set of numbers and return sum
-//take an array and return sum
+//OOP Section 01 Q1
+//Implement a stopwatch with the following
+//start(), stop(),duration(),reset(),start(),stop(), duration
 
-function sum (...items){
+function Stopwatch(){
+ let startTime, endTime, running, duration = 0;
+ 
+ this.start = function () {
+ if(running)
+  throw new Error ('Stopwatch has already started');
+  running = true;
+  startTime = new Date();
+};
 
-    if(items.length === 1 && Array.isArray(items[0]))
-    {
-        items = [...items[0]];
-    }
-    return items.reduce((a,b)=>a + b);
+this.stop = function () {
+    if(!running)
+      throw new Error('Stopwatch is not started.');
+    
+      running = false;
+
+      endTime = new Date();
+
+      const seconds = (endTime.getTime()=startTime.getTime())/1000;
+      duration +=seconds;
+};
+
+this.reset = function(){
+    startTime = null,
+    endTime = null;
+    rinning = false;
+    duration = 0;
+};
+
+Object.defineProperty(this,'duration',{
+    get: function() {return duration;}
+});
 }
 
-//See, either way you get the sum now 
-console.log(sum(1,2,4,5));
-console.log(sum([1,2,4,5]));
+console.log()
